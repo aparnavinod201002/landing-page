@@ -1,5 +1,5 @@
 import React from 'react'
-import './BookTrips.css'
+import './Booktrips.css'
 import img4 from '../assets/img4.jpg'
 import img5 from '../assets/img5.png'
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./testimonials.css";
+import "./Testimonials.css";
 import img6 from "../assets/img6.png";
 
 function Testimonials() {
