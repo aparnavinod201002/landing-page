@@ -1,5 +1,5 @@
 import React from "react";
-import "./partners.css";
+import "./Partners.css";
 import img7 from "../assets/img7.png";
 import img8 from "../assets/img8.png";
 import img9 from "../assets/img9.png";
