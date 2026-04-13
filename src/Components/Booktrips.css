@@ -1,0 +1,322 @@
+.booktrip {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /*  important fix */
+    padding: 80px clamp(20px, 5vw, 80px);
+    gap: 80px;
+    background: #fff;
+}
+
+/* ── LEFT ── */
+.booktrip-left {
+    flex: 1;
+}
+
+.booktrip-tag {
+    font-size: 14px;
+    font-weight: 600;
+    color: #F1A501;
+    margin-bottom: 14px;
+}
+
+.booktrip-title {
+    font-family: 'Volkhov', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #181E4B;
+    line-height: 1.2;
+    margin-bottom: 44px;
+}
+
+/* steps */
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.step-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #181E4B;
+    margin-bottom: 6px;
+}
+
+.step-desc {
+    font-size: 14px;
+    color: #5E6282;
+    line-height: 1.7;
+    max-width: 320px;
+}
+
+/* ── RIGHT ── */
+.booktrip-right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*  better alignment */
+    min-height: 420px;
+}
+
+/* main card */
+.trip-card {
+    background: #fff;
+    border-radius: 26px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 340px;
+    /*  responsive */
+}
+
+.trip-img-wrap {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.trip-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trip-info {
+    padding: 18px 20px 20px;
+}
+
+.trip-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #181E4B;
+    margin-bottom: 6px;
+}
+
+.trip-meta {
+    font-size: 13px;
+    color: #5E6282;
+    margin-bottom: 16px;
+}
+
+/* icon buttons */
+.trip-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.trip-icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trip-icon-btn:hover {
+    border-color: #F1A501;
+}
+
+/* people row */
+.trip-people {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #5E6282;
+    border-top: 1px solid #F0F0F0;
+    padding-top: 14px;
+}
+
+.heart {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/* ── ongoing card ── */
+.ongoing-card {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 220px;
+}
+
+.ongoing-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.ongoing-label {
+    font-size: 11px;
+    color: #5E6282;
+    margin-bottom: 2px;
+}
+
+.ongoing-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #181E4B;
+    margin-bottom: 8px;
+}
+
+/* progress */
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background: #F0F0F0;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 40%;
+    height: 100%;
+    background: #F1A501;
+    border-radius: 10px;
+}
+
+.progress-text {
+    font-size: 11px;
+    color: #5E6282;
+}
+
+.pct {
+    font-weight: 700;
+    color: #181E4B;
+}
+
+/* ============================= */
+/*  MOBILE */
+/* ============================= */
+@media (max-width: 576px) {
+
+    .booktrip {
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .booktrip-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .booktrip-tag {
+        text-align: center;
+    }
+
+    .steps {
+        gap: 24px;
+    }
+
+    .step {
+        gap: 14px;
+    }
+
+    .step-desc {
+        max-width: 100%;
+    }
+
+    .booktrip-right {
+        min-height: auto;
+    }
+
+    .trip-card {
+        max-width: 320px;
+    }
+
+    .ongoing-card {
+        position: static;
+        /*  fix */
+        margin-top: 20px;
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+/* ============================= */
+/*  TABLET */
+/* ============================= */
+@media (max-width: 992px) {
+
+    .booktrip {
+        flex-direction: column;
+        padding: 70px 40px;
+        gap: 40px;
+    }
+
+    .booktrip-title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .booktrip-tag {
+        text-align: center;
+    }
+
+    .booktrip-right {
+        justify-content: center;
+        min-height: auto;
+        /*  fix */
+    }
+
+    .trip-card {
+        max-width: 320px;
+    }
+
+    .ongoing-card {
+        position: static;
+        /* IMPORTANT FIX */
+        margin-top: 20px;
+    }
+}
+
+/* ============================= */
+/*  SMALL LAPTOP */
+/* ============================= */
+@media (max-width: 1200px) {
+
+    .booktrip {
+        gap: 60px;
+    }
+
+    .trip-card {
+        max-width: 300px;
+    }
+}

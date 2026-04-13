@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #212832;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* GLOBAL SECTION SPACING */
+section {
+  padding: 80px clamp(20px, 5vw, 80px);
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* BUTTON */
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* FLEX HELPERS */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ============================= */
+/* 📱 MOBILE */
+/* ============================= */
+@media (max-width: 576px) {
+
+  h1 { font-size: 28px !important; }
+  h2 { font-size: 24px !important; }
+  h3 { font-size: 18px !important; }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  /* stack all layouts */
+  .flex,
+  .container,
+  .booktrip,
+  .container,
+  .footer,
+  .services-grid,
+  .dest-grid {
+    flex-direction: column !important;
+  }
+
+  /* grids → 1 column */
+  .services-grid,
+  .dest-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* fix widths */
+  .trip-card,
+  .card,
+  .dest-card {
+    width: 100% !important;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* inputs full width */
+  input, button {
+    width: 100%;
+  }
+}
+
+/* ============================= */
+/* 📱 TABLET */
+/* ============================= */
+@media (max-width: 992px) {
+
+  .booktrip,
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dest-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    justify-content: center;
+    text-align: center;
+  }
+}
+/* FIX overflow issues */
+body {
+  overflow-x: hidden;
+}
+
+/* prevent breaking layouts */
+.booktrip,
+.services,
+.destinations,
+.testimonials,
+.subscribe-section {
+  width: 100%;
+}
+
+/* fix absolute elements */
+@media (max-width: 992px) {
+  .ongoing-card {
+    position: static !important;
+    margin-top: 20px;
+  }
+}
